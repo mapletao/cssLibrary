@@ -1,0 +1,79 @@
+@alerBoxtWidth:1024px;  // 弹窗外层宽度
+@alertBoxHeight:600px;  //  弹窗外层高度
+@alertBgColor: #fff;  //  弹窗背景颜色
+@alertBoxShadowColor: #ccc; // 弹窗阴影颜色
+@alertBoxBorderRadius: 10px;  // 弹窗圆角
+@alertHeaderHeight:56px;   // 弹窗标题高度
+@alertFooterHeight:60px;   // 弹窗footer高度
+
+@alertContentPadding:20px 20px 10px 10px; // 内容区padding
+
+@splitBorderColor: #f0f0f0; // 分割线颜色
+
+.zt-alert-box {
+  position: absolute;
+  width: @alerBoxtWidth;
+  height: @alertBoxHeight;
+  background: @alertBgColor;
+  box-shadow: 0 0 10px @alertBoxShadowColor;
+  border-radius: @alertBoxBorderRadius;
+  z-index: 99;
+  padding: @alertHeaderHeight 0 @alertFooterHeight;
+  overflow: hidden;
+  .box-center-margin(@alerBoxtWidth, @alertBoxHeight);
+  .zt-alert-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @alertHeaderHeight;
+    padding: 0 20px;
+    border-bottom: 1px solid @splitBorderColor;
+    clear: both;
+    .zt-alert-header-title {
+      font-weight: inherit;
+      font-size: 18px;
+      line-height: @alertHeaderHeight;
+    }
+    .zt-alert-close{
+      margin-top: @alertHeaderHeight/4;
+    } 
+  }
+  .zt-alert-content{
+      height: 100%;
+      width:100%;
+      padding: @alertContentPadding;
+      overflow-y:auto;
+  }
+    .zt-alert-footer{
+      position: absolute;
+      bottom: 0;
+      left:0;
+      height: @alertFooterHeight;
+      width:100%;
+      border-top:1px solid @splitBorderColor; 
+  }
+}
+.zt-alert-close{
+  float: right;
+  color: #000;
+  opacity: .4;
+  text-shadow: 0 1px 0 #fff;
+  font-size:21px;
+  font-weight:500;
+  cursor: pointer;
+}
+// translate居中
+.box-center() {
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+// margin居中
+.box-center-margin(@width, @height) {
+  top:50%;
+  left:50%;
+  margin-left: -@width/2;
+  margin-top: -@height/2;
+}

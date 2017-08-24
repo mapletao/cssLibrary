@@ -1,0 +1,56 @@
+.zt-alert-box {
+  position: absolute;
+  width: 1024px;
+  height: 600px;
+  background: #fff;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 10px;
+  z-index: 99;
+  padding: 56px 0 60px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  margin-left: -512px;
+  margin-top: -300px;
+}
+.zt-alert-box .zt-alert-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  padding: 0 20px;
+  border-bottom: 1px solid #f0f0f0;
+  clear: both;
+}
+.zt-alert-box .zt-alert-header .zt-alert-header-title {
+  font-weight: inherit;
+  font-size: 18px;
+  line-height: 56px;
+}
+.zt-alert-box .zt-alert-header .zt-alert-close {
+  margin-top: 14px;
+}
+.zt-alert-box .zt-alert-content {
+  height: 100%;
+  width: 100%;
+  padding: 20px 20px 10px 10px;
+  overflow-y: auto;
+}
+.zt-alert-box .zt-alert-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+}
+.zt-alert-close {
+  float: right;
+  color: #000;
+  opacity: .4;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 21px;
+  font-weight: 500;
+  cursor: pointer;
+}
