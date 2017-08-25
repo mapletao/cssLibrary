@@ -1,0 +1,56 @@
+@formListWidth:300px;
+@formListHeight:30px;
+@labelWidth: 60px;
+
+// 默认标签左对齐，输入框右对齐
+.zt-form-list {
+  position: relative;
+  display: inline-block;
+  width: @formListWidth;
+  height:@formListHeight;
+  margin: 10px;
+  padding: 0 0 0 @labelWidth;
+  .zt-form-label{
+    position: absolute;
+    left:0;
+    width:@labelWidth;
+    height:100%;
+    font-size:16px;
+    line-height: @formListHeight;
+    text-align: right;
+  }
+  .zt-form-input-wrap{
+    width:100%;
+    height:100%;
+    line-height: @formListHeight;
+    .zt-form-input{
+      width:100%;
+      height:100%;
+      vertical-align: top;
+      box-sizing: border-box;
+    }
+  }
+}
+
+//标签右对齐，输入框左对齐
+.zt-form-list-right{
+  padding: 0 @labelWidth 0 0 ;
+  .zt-form-label{
+    left: inherit;
+    right:0;
+    padding-left: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-left:none;
+  }
+}
+
+// 换行显示
+.zt-form-list-line {
+  padding:0;
+  .zt-form-label{
+    position: relative;
+    width: 100%;
+    text-align: left;
+  }
+}
