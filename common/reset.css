@@ -139,4 +139,5 @@ hr {
 input,
 select {
     vertical-align: middle;
+    padding-left: 5px;
 }
