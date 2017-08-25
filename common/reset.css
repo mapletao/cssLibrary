@@ -81,10 +81,6 @@ body {
     line-height: 1;
 }
 
-:focus {
-    outline: 1;
-}
-
 article,
 aside,
 canvas,
@@ -114,7 +110,6 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
     content: none;
 }
 
