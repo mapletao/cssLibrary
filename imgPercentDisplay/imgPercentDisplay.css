@@ -1,0 +1,15 @@
+.img-box {
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 0;
+  padding-bottom: 28%;
+  overflow: hidden;
+}
+.img-box > img {
+  position: absolute;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
