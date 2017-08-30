@@ -1,17 +1,20 @@
 @imgBoxWidth: 50%;
 @percent: 0.56;
+.img-box(@imgBoxWidth,@percent);
 
-.img-box{
-  display: block;
-  position: relative;
-  width:@imgBoxWidth;
-  height:0;
-  padding-bottom: @imgBoxWidth*@percent;
-  overflow: hidden;
-  >img{
-    position: absolute;
-    max-width: 100%;
-    .box-center();
+.img-box(@imgBoxWidth,@percent){
+  .img-box {
+    display: block;
+    position: relative;
+    width: @imgBoxWidth;
+    height:0;
+    padding-bottom: @imgBoxWidth*@percent;
+    overflow: hidden;
+    > img {
+      position: absolute;
+      max-width: 100%;
+      .box-center();
+    }
   }
 }
 .box-center() {
