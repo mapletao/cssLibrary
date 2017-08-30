@@ -1,4 +1,4 @@
-@alerBoxtWidth:1024px;  // 弹窗外层宽度
+@alertBoxWidth:1024px;  // 弹窗外层宽度
 @alertBoxHeight:600px;  //  弹窗外层高度
 @alertBgColor: #fff;  //  弹窗背景颜色
 @alertBoxShadowColor: #ccc; // 弹窗阴影颜色
@@ -12,7 +12,7 @@
 
 .zt-alert-box {
   position: fixed;
-  width: @alerBoxtWidth;
+  width: @alertBoxWidth;
   height: @alertBoxHeight;
   background: @alertBgColor;
   box-shadow: 0 0 10px @alertBoxShadowColor;
@@ -20,7 +20,7 @@
   z-index: 99;
   padding: @alertHeaderHeight 0 @alertFooterHeight;
   overflow: hidden;
-  .box-center-margin(@alerBoxtWidth, @alertBoxHeight);
+  .box-center-margin(@alertBoxWidth, @alertBoxHeight);
   .zt-alert-header {
     position: absolute;
     top: 0;
