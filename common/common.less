@@ -1,20 +1,20 @@
-
 // translate居中
 .box-center() {
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // margin居中
 .box-center-margin(@width, @height) {
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   margin-left: -@width/2;
   margin-top: -@height/2;
 }
+
 //文字显示行数 能在webkit和移动端中实现
- .text-line(@value){
+.text-line(@value) {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -22,10 +22,18 @@
   -webkit-box-orient: vertical;
   word-break: break-all;
 }
-// 存在bug 文字显示在pc端需用js实现
-.text-line-p(@value,@lineHeight){
+
+// 存在bug
+.text-line-p(@value,@lineHeight) {
   position: relative;
   line-height: @lineHeight;
-  max-height:@lineHeight*@value;
+  max-height: @lineHeight*@value;
   overflow: hidden;
+  > span {
+    position: absolute;
+    top: @lineHeight*@value - @lineHeight;
+    right: 0;
+    background: #fff;
+    line-height: @lineHeight;
+  }
 }
