@@ -9,7 +9,7 @@
 @alertContentPadding:20px 20px 10px 10px; // 内容区padding
 
 @splitBorderColor: #f0f0f0; // 分割线颜色
-
+@import "../common/common";
 .zt-alert-box {
   position: fixed;
   width: @alertBoxWidth;
@@ -62,18 +62,4 @@
   font-size:21px;
   font-weight:500;
   cursor: pointer;
-}
-// translate居中
-.box-center() {
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
-
-// margin居中
-.box-center-margin(@width, @height) {
-  top:50%;
-  left:50%;
-  margin-left: -@width/2;
-  margin-top: -@height/2;
 }
