@@ -1,0 +1,23 @@
+//文字显示行数
+.text-line(@value){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @value;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+// translate居中
+.box-center() {
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+// margin居中
+.box-center-margin(@width, @height) {
+  top:50%;
+  left:50%;
+  margin-left: -@width/2;
+  margin-top: -@height/2;
+}
